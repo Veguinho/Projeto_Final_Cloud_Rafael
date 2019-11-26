@@ -7,11 +7,10 @@ Projeto Final de Cloud - Script de criação
  pip install boto3
  pip install awscli
 ```
- - Depois é necessário rodar o comando:
+ - Depois é necessário rodar o comando abaixo com os seguintes parâmetros referentes a sua conta da AWS: (key); (secret key); us-east-1; <null>;
 ```
 aws configure;
 ```
- Com os seguintes parâmetros referentes a sua conta da AWS: (key); (secret key); us-east-1; <null>;
 - Para rodar o programa digite:  
 ```
 python3 create_insfrastructure.py
