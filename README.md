@@ -7,14 +7,14 @@ Projeto Final de Cloud - Script de criação
  pip install boto3
  pip install awscli
 ```
- - Depois é necessário rodar o comando  
+ - Depois é necessário rodar o comando:
 ```
-  aws configure;
+aws configure;
 ```
  Com os seguintes parâmetros referentes a sua conta da AWS: (key); (secret key); us-east-1; <null>;
 - Para rodar o programa digite:  
 ```
- python3 create_insfrastructure.py
+python3 create_insfrastructure.py
 ```
 - Espere todas as instâncias subirem na AWS, principalmente a instância que é controlada pelo Loadbalancer. Essa instância pertence ao security group: Loadbalancer.
   
@@ -23,7 +23,7 @@ Projeto Final de Cloud - Script de criação
 - Para rodar o teste, existem 2 comandos implementados para teste: "listar" e "adicionar". O comando "listar" retorna o banco conteúdo todo do banco de dados. O comando "adicionar" adiciona uma tarefa nova no banco de dados, com o nome "Tarefa 1".
 Para rodar o teste digite:
 ```
-  python3 tarefa_test listar
+python3 tarefa_test listar
 ```
 com resultado esperado:
 ```
@@ -32,7 +32,7 @@ Status 200
 ```
 ou
 ```
-  python3 tarefa_test adicionar
+python3 tarefa_test adicionar
 ```
 com resultado esperado:
 ```
