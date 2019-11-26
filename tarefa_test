@@ -1,0 +1,38 @@
+#!/usr/bin/env python3
+import sys, requests, json, os
+from pathlib import Path
+
+json_folder = Path("server_adress_test.json")
+with open(str(json_folder)) as json_file:
+    data = json.load(json_file)
+    adress = data['ip']
+
+if sys.argv[1] == "healthcheck":
+    r = requests.get(adress + '/healthcheck')
+    print("Status " + str(r.status_code))
+    print(r.json())
+
+elif sys.argv[1] == "listar":
+    r = requests.get(adress + '/Tarefa/')
+    print("Status " + str(r.status_code))
+    print(r.json())
+
+elif sys.argv[1] == "adicionar":
+    r = requests.post(adress + '/Tarefa/')
+    print("Status " + str(r.status_code))
+    print(r.json())
+
+elif sys.argv[1] == "buscar":
+    r = requests.get(adress + '/Tarefa/' + str(sys.argv[2]))
+    print("Status " + str(r.status_code))
+    print(r.json())
+
+elif sys.argv[1] == "atualizar":
+    r = requests.put(adress + '/Tarefa/' + str(sys.argv[2]))
+    print("Status " + str(r.status_code))
+    print(r.json())
+
+elif sys.argv[1] == "apagar":
+    r = requests.delete(adress + '/Tarefa/' + str(sys.argv[2]))
+    print("Status " + str(r.status_code))
+    print(r.json())
